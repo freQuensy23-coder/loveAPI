@@ -22,4 +22,4 @@ class API:
 
     def get_random_msg(self, endpoints):
         endpoint = choice(endpoints)
-        self.get_all_msgs_group(endpoint)
+        return self.get_all_msgs_group(endpoint)
