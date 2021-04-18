@@ -5,4 +5,4 @@ class API:
         pass
 
     def get_all_msgs(self, endpoint):
-        r =
+        r = req
