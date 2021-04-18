@@ -12,10 +12,10 @@ def get_page_link(link, page_num):
         return link
     if link[-1] == "/":
         log.debug(f'Get {link[:-1] + f"_{page_num}"}')
-        return link[:-1] + f"{page_num}"
+        return link[:-1] + f"_{page_num}"
     else:
-        log.debug(f'Get {link + f"{page_num}"}')
-        return link + f"{page_num}"
+        log.debug(f'Get {link + f"_{page_num}"}')
+        return link + f"_{page_num}"
 
 
 def get_page_msgs(page: bytes) -> list:
