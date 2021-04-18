@@ -2,12 +2,12 @@ from love_parser import *
 from random import choice
 from logging import getLogger
 from love_parser import get_group_msgs
-
+import config
 
 class API:
     def __init__(self):
         self._log = getLogger("API")
-        self.endpoints = []
+        self.endpoints = config.ENDPOINTS
 
     def get_all_msgs_group(self, endpoint):
         self._log.debug(f"Getting all msgs from group {endpoint}")
@@ -25,3 +25,6 @@ class API:
         endpoint = choice(endpoints)
         log.debug(endpoint)
         return self.get_random_msg_group(endpoint)
+
+    def get_endpoints(self):
+        return self.endpoints
