@@ -3,9 +3,9 @@ domain = "http://smsta.ru/"
 
 ENDPOINTS = {
     "her":{
-        "love":"/m/sms/m_love"
+        "love":"http://smsta.ru/m/sms/m_love"
     },
     "him":{
-      "love":"/w/sms/love"
+      "love":"http://smsta.ru/w/sms/love"
     }
 }

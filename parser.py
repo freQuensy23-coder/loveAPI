@@ -1,6 +1,5 @@
 import requests as req
 from bs4 import BeautifulSoup as BS
-from urllib.parse import urljoin
 import logging
 
 log = logging.getLogger("parser")
