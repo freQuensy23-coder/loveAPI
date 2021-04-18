@@ -33,7 +33,9 @@ def get_group_msgs(link: str) -> list:
     msgs = []
     r = req.get(get_page_link(link=link, page_num=i))
     while r.status_code == 200:
-        msgs.append(get_page_msgs(r.content))
+        page_msgs = get_page_msgs(r.content)
+        for p_msg in page_msgs:
+            msgs.append(p_msg)
         i += 1
         r = req.get(get_page_link(link=link, page_num=i))
     return msgs
